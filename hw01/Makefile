@@ -1,10 +1,10 @@
 all: main
 
-main.o: main.cc squared.h
+main.o: main.cc multiply.h
 	g++ -c main.cc
 	
-squared.o: squared.cc squared.h
-	g++ -c squared.cc
+multiply.o: multiply.cc multiply.h
+	g++ -c multiply.cc
 	
-main:	squared.o main.o
-	g++ -o main main.o squared.o
+main:	multiply.o main.o
+	g++ -o main main.o multiply.o
