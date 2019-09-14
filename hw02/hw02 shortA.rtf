@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 1. What is the difference between int and const int? \
+An int is an integer where the value can be change throughout a program. The const int is a constant integer that will remain unchanged, like the value of pi. \
+\
+2. What is the difference between a function declaration and a function definition? \
+A function declaration is when a functions declares the name of the function and the type it returns. A function definition defines the function itself.\
+\
+3. What is wrong with the following C++ code? How would you fix it? int sum; for(int i=0; i<1000; ++i) \{ sum += i; \} printf("Sum of 0 to 999 is %d\\n", sum); \
+The variable sum is not initialized, so the code should be int sum =0;\
+\
+4. What is wrong with the following code and how would you fix it? int n = 1; if(n = 0) \{ print("n is zero\\n"); \} \
+In the if statement should be n ==0. The print statement should be printf.\
+\
+5. What is wrong with the following code and how would you fix it? int* ptr = nullptr; scanf("%d", ptr); printf("You entered %d", *ptr); \
+The scanf should be ptr*\
+\
+6. What is the difference between the * and & operators? \
+The * operator dereferences a pointer and it will return the contents that were in the memory location. The & returns a pointer to the memory location of  a variable. \
+\
+7. Describe what each of the following declare: \
+(a) int* a; \
+declared a pointer and if you dereference it will be an int.\
+(b) const int b; \
+declared a constant integer to b. \
+(c) const int* c; \
+declares a pointer to a contant integer\
+(d) int* const d; \
+declared a constant pointer to an integer\
+(e) const int* const e;\
+declared a constant pointer to a constant integer.}
