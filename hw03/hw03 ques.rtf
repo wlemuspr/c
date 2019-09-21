@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 1. What is wrong with the following code, and how would you fix it? \
+void swap(int* a, int* b) \{ \
+int* tmp = a; \
+a = b; \
+b = tmp; \
+\} // end of swap method \
+\
+The program only changes the pointers. To fix is:\
+int temp;\
+temp =*a;\
+*a = *b;\
+*b = temp;\
+\
+2. Suppose you have a function that takes an array as an argument in the usual way, which is declared as:\
+ void f(int* array, int length); Suppose you also have an array declared as: int a[128]; How would you pass a sub-array containing only the third through sixth elements of a to the function f? \
+\
+f((array+2),4);\
+\
+3. What is wrong with the following code and how would you fix it? \
+double* allocateArray(int length) \{ \
+double array[length]; \
+return array; \
+\}\
+The line 2 of the code should be double array = new double [length]\
+\
+ 4. What is wrong with the following code, and how would you fix it? \
+char string[5]; \
+string[0] = \'92h\'92; \
+string[1] = \'92e\'92; \
+string[2] = \'92l\'92; \
+string[3] = \'92l\'92; \
+string[4] = \'92o\'92; \
+printf("%s\\n", string);\
+\
+The null terminator is needed to indicate the end of the string. after string[4] there should be:\
+string[5] = \'91/0\'92;}
