@@ -13,12 +13,18 @@ unsigned char* ppmRead(int* height, int* width, int* size){
     //open file to read
     char header[10];
     int max_pix;
-    FILE* fd = fopen("test.ppm","rb");
+    FILE* fd = fopen("C:\\Pictures\\test.ppm","rb");
+    
+    //error
+    if(fd == NULL){
+        printf("Error in Opening the file\n");
+        return NULL;
+    }
     //reader
     printf("Header reader\n");
     fscanf(fd,"%s %d %d %d\n",header, width, height, &max_pix);
     printf("PSix: %s\n", header);
-    printf("Width: %d\n", *width);
+    printf("Width: %s\n", *width);
     printf("Height: %d\n", *height);
     printf("maximum: %d\n", max_pix);
     
