@@ -1,0 +1,82 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Bold;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green0\blue7;\red25\green60\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c12195\c0;\cssrgb\c12594\c35385\c100000;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 Homework 6 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 1. What is wrong with the following code and how would you fix it? \
+#ifndef PROJECTILE_H \
+#define PROJECTILE_H \
+class Projectile \{\
+ private:\
+ double position; \
+double velocity; \
+\
+public:\
+ Projectile(double position, double velocity);\
+ virtual \'98Projectile();\
+ double getPosition() const;\
+ double getVelocity() const; \
+\}\cf3 ;\cf2  // end of Projecile class \
+#endif\
+\cf4 The end of the class does not have a semicolon that will cause error. The semicolon is added at the end of the last curly bracket. \
+\cf2 \
+ 2. The following is the definition of the constructor for the Projectile class above, but there are three things wrong with it. What are they and how would you fix them?\
+ Projectile(int position, int velocity) \{\
+ this.position = position;\
+ this.velocity = velocity; \
+\} // end of constructor \
+\
+\cf4 The variable should not be ints but doubles and the declarations would not match the header file. The class needs to be included. The pointers are not used correctly. \
+\
+Projectile::Projectile (double speed, double velocity)\{\
+this-> speed = speed;\
+this->velocity = velocity;\
+\}//end\cf2 \
+3. Describe each of the following methods \
+(a) int* method(int* arg); \
+\cf4 A method take pointer to an int and return a pointer to an int. \cf2 \
+(b) const int* method(int* arg); \
+\cf4 A method that takes a pointer to an int and returns a pointer to constant int.\cf2 \
+(c) const int* const method(int* arg); \
+\cf4 A method that take a pointer int and returns a constant pointer to a constant int.\cf2 \
+(d) const int* const method(const int* arg); \
+\cf4 A method that takes a pointer to a constant int and returns a constant pointer to a constant int.\cf2 \
+(e) const int* const method(const int* arg) const;\
+\cf4 A constant method that takes a pointer to constant int and return a constant pointer to a constant int.\cf2 \
+ 4. In what ways are C++ strings better than C strings? In what ways are C strings better than C++ strings? \
+\cf4 C++ strings are more safer and convenient to use than C strings because they avoid security holes.  C strings are a more lightweight and effective design. \cf2 \
+5. What is the difference between a pointer and a reference? \
+\cf4 References are automatically dereferenced. and have two restrictions which are initialized when declared and after that the references can not point to anything else. They can not be null. \cf2 \
+6. What is a destructor for? \
+\cf4 The destructor gets called when a class is deleted to erase the heap data that was created by the object. \cf2 \
+\
+\
+
+\f2\b Program:
+\f1\b0 \
+7. Write an Angle class. The interesting thing about angles is that they cycle through the range 0 
+\f3 \uc0\u9702 
+\f1  to 360
+\f3 \uc0\u9702 
+\f1  . For example, 250
+\f3 \uc0\u9702 
+\f1  + 190
+\f3 \uc0\u9702 
+\f1  = 80
+\f3 \uc0\u9702 
+\f1  , and 40
+\f3 \uc0\u9702 
+\f1  \uc0\u8722  90
+\f3 \uc0\u9702 
+\f1  = 310
+\f3 \uc0\u9702 
+\f1  . In other words, you do a math operation and then while the angle is greater than 360, you subtract 360. While it is less than 0, you add 360. (a) Write a small program that tests your class as you are adding each of the features described below. (b) Make the class printable. (c) Implement the following operators: \'95 +, -, +=, and -= operators so that you can add and subtract pairs of angles. \'95 *, /, *= and /= so that you can multiply and divide an angle by a double. \'95 = so that you can assign from either another Angle or a double. \'95 == to compare two Angles. The angle should always be between 0 and 360 degrees after any of these operations.}
