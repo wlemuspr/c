@@ -1,0 +1,22 @@
+
+Homework 7
+1. What does the friend keyword do? 
+	Methods are allowed to have access to private data but functions do not have the same privileges. The friend keyword shows the functions that it can be trusted to access private data and methods. 
+
+2. Why should you never use using namespace std;? 
+	C++ does not have a way to keep package names different so it created naming collisions. The namespace can not be used to avoid naming collisions. 
+
+3. Why is memory management in C++ hard? 
+	Memory management in C++ gets hard because classes are able to store data. The heap memory management because it needs to be deleted with a destructor. 
+
+4. Describe the concept of “ownership”, as it pertains to memory management in C++. 
+	The ownership of a resource is responsible for freeing up the memory when it is no longer needed. 
+
+5. What are the three ways a class can contain objects in C++? 
+	A class can contain objects by being private, protected, or public. The  private functions it can only be used by member functions or friends of the class. Protected can be used only by member functions and friends of the class. Public can be used by any function. 
+
+6. What is a forward declaration and why would you use one?
+	A forward declaration is used to declare something in advance by telling the complier about the existence of a functions or class before defining it. 
+
+
+
